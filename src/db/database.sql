@@ -9,8 +9,7 @@ CREATE TABLE user (
   PRIMARY KEY (id),
   UNIQUE INDEX username_UNIQUE (username ASC) VISIBLE,
   UNIQUE INDEX email_UNIQUE (email ASC) VISIBLE,
-  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)
-ENGINE = InnoDB;
+  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE);
 
 CREATE TABLE work_group (
   id INT NOT NULL,
@@ -19,8 +18,7 @@ CREATE TABLE work_group (
   created_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   UNIQUE INDEX name_UNIQUE (name ASC) VISIBLE,
-  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)
-ENGINE = InnoDB;
+  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE);
 
 CREATE TABLE task (
   id INT NOT NULL,
@@ -43,8 +41,7 @@ CREATE TABLE task (
     FOREIGN KEY (work_group_id)
     REFERENCES work_group (id)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    ON UPDATE NO ACTION);
 
 CREATE TABLE user_has_work_group (
   id INT NOT NULL,
@@ -63,5 +60,4 @@ CREATE TABLE user_has_work_group (
     FOREIGN KEY (work_group_id)
     REFERENCES work_group (id)
     ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+    ON UPDATE NO ACTION);
