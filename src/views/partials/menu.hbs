@@ -1,0 +1,33 @@
+<div class="d-flex p-1 justify-content-between fixed-sm-top menu__bar" id="menu_bar">
+    <div class="h-100 w-25 ml-4 d-flex align-items-center justify-content-evenly menu__logo">
+        <img class="h-100 rounded-circle" src="/assets/cuadrado.png" alt="bear" title="bear">
+        Landy's ToDos
+    </div>
+    <button class="btn py-0 px-1 d-flex align-items-center justify-content-between menu__open"
+        data-bs-toggle="offcanvas" data-bs-target="#menu">
+        <i class='bx bx-menu'></i>
+    </button>
+</div>
+<header class="offcanvas offcanvas-end" style="transition: all .5s ;" id="menu">
+    <div class="offcanvas-header d-flex justify-content-end pe-0 pt-2 pb-0">
+        <form action="/logout" method="POST" class="me-auto btn menu__logout">
+            <button type="submit">Logout <i class='bx bx-power-off'></i></button>
+        </form>
+        <button class="btn py-0 px-1" data-bs-dismiss="offcanvas"><i id="chevron"
+                class='bx bxs-chevrons-right'></i></button>
+    </div>
+    <nav class="d-flex flex-column justify-content-start h-50 nav__menu">
+        <div class="d-flex justify-content-around align-items-center py-2">
+            <div class="nav__img__container">
+                <img class="img-fluid rounded-circle" src="/assets/cuadrado.png" alt="">
+            </div>
+            <p class="nav__user__text">{{user.full_name}}</p>
+        </div>
+        <a class="pt-3 pb-0 pe-3 text-end" href="/user">{{user.username}}'s profile<i
+                class='bx bxs-user-detail'></i></a>
+        <a class="pt-3 pb-0 pe-3 text-end" href="/">My ToDo List<i class='bx bxs-spreadsheet'></i></a>
+        <a class="pt-3 pb-0 pe-3 text-end" href="/groups">Workgroups<i class='bx bxs-group'></i></a>
+    </nav>
+    <!-- Menu Script -->
+    <script src="/js/menu.js"></script>
+</header>

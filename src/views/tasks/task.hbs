@@ -1,0 +1,25 @@
+<section class="container">
+    <div class="row justify-content-between h-100">
+        <div class="col-lg-4 p-0 align-self-center task__container">
+            <form action="/tasks/add" method="POST" class="w-75 p-3 mx-auto task__creation__container">
+                <legend class="fw-bold">Create new ToDo</legend>
+                <div class="form-group mb-2">
+                    <label class="form-label" for="title">ToDo Title</label>
+                    <input class="form-control" type="text" name="title" id="title" maxlength="20"
+                        placeholder="Type your title here" autofocus required>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="form-label" for="description">ToDo Description</label>
+                    <textarea class="form-control task__textarea" name="description" id="description"
+                        placeholder="Type your description here" required></textarea>
+                </div>
+                <div class="d-grid">
+                    <input class="btn task__submit fw-bold" type="submit" value="Create">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-8 align-self-center task__scroll">
+            {{> task_list tasks=data }}
+        </div>
+    </div>
+</section>

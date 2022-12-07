@@ -1,0 +1,74 @@
+/* Task List */
+
+.h-20 {
+    max-height: 20vh !important;
+}
+
+.task__card {
+    background-color: var(--cream_shadow) !important;
+}
+
+.task__list__btn {
+    transition: all .7s !important;
+    background-color: var(--white_shadow) !important;
+}
+
+.task__list__btn:hover {
+    background-color: var(--chocolate) !important;
+}
+
+.task__list__btn a {
+    transition: all .7s !important;
+    color: black;
+    text-decoration: none !important;
+}
+
+.task__list__btn a:hover {
+    color: white;
+}
+
+.task__card__textarea {
+    resize: none;
+}
+@media (max-width: 768px) {
+    .task__container {
+        position: static !important;
+    }
+
+    .task__ghost {
+        display: none !important;
+    }
+
+    h4.card-title,
+    .task__card__description {
+        font-size: 3.3vw !important;
+    }
+
+    .task__card__timeago,
+    .task__card__textarea,
+    .task__list__btn {
+        font-size: 2.6vw !important;
+    }
+
+    .task__card__description {
+        position: absolute !important;
+        color: white;
+    }
+
+    .task__card__textarea {
+        padding-top:4vw !important;
+        min-height: 100% !important;
+        background-color: var(--cream);
+        color: var(--chocolate);
+        box-shadow: 2px 6vw 0px -10px var(--chocolate) inset !important;
+        -webkit-box-shadow: 2px 6vw 0px -10px var(--chocolate) inset !important;
+        -moz-box-shadow: 2px 6vw 0px -10px var(--chocolate) inset !important;
+    }
+}
+@media (max-width: 576px){
+    .task__card__textarea {
+        box-shadow: 2px 7vw 0px -10px var(--chocolate) inset !important;
+        -webkit-box-shadow: 2px 7vw 0px -10px var(--chocolate) inset !important;
+        -moz-box-shadow: 2px 7vw 0px -10px var(--chocolate) inset !important;
+    }
+}

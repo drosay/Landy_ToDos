@@ -1,0 +1,37 @@
+<div class="w-100 p-3">
+    {{#each tasks}}
+    <div class="card h-20 p-2 mb-2 task__card">
+        <div class="row">
+            <div class="col-4 pe-0 task__card__timeago">
+                <h4 class="card-title">{{title}}</h4>
+                <p class="card-subtitle text-secondary">
+                    <i class='bx bxs-calendar'></i> {{timeago created_date}}
+                </p>
+                {{#if end_date}}
+                <p class="text-success"><i class='bx bxs-calendar-check'></i> {{timeago end_date}}</p>
+                {{/if}}
+            </div>
+            <div class="col-2 p-0">
+                <div class="btn-group-vertical btn-group-sm" role="group">
+                    {{#if end_date}}
+                    {{else}}
+                    <button class="btn task__list__btn"><a href="/tasks/finish/{{id}}&{{user_id}}">Finish</a></button>
+                    <button class="btn task__list__btn"><a href="/tasks/up/{{id}}&{{user_id}}">Edit</a></button>
+                    {{/if}}
+                    <button class="btn task__list__btn"><a href="/tasks/del/{{id}}&{{user_id}}">Delete</a></button>
+                </div>
+            </div>
+            <div class="col-6 ps-0">
+                <div class="h-100">
+                    <label class="card-title m-0 task__card__description">Description</label>
+                        <textarea class="card-text w-100 rounded task__card__textarea"
+                            readonly>{{description}}</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>No ToDos yet</p>
+    <p>Create one</p>
+    {{/each}}
+</div>

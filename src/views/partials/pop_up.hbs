@@ -1,0 +1,12 @@
+{{#if good}}
+<div class="pop__up">
+    <p id="pop_up" class="pop__up__text good">{{good}}</p>
+</div>
+{{else}}
+{{#if not_good}}
+<div class="pop__up">
+    <p id="pop_up" class="pop__up__text not__good">{{not_good}}</p>
+</div>
+{{/if}}
+{{/if}}
+<script src="/js/pop_up.js"></script>

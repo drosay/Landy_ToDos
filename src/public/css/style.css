@@ -1,0 +1,29 @@
+/*App style configuration*/
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root{
+    --gray: #ffffff;
+    --cream: #bcae9f;
+    --cream_shadow: #bcae9f82;
+    --chocolate: #736a61;
+    --white_shadow: rgba(255, 255, 255, 0.24);
+}
+body{
+    background-color: var(--gray);
+    background-image: url('../assets/bear.png');
+    background-repeat: repeat;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+.app__container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

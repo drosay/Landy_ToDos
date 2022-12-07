@@ -1,0 +1,146 @@
+.container{
+    height: 90vh!important;
+}
+.task__creation__container {
+    background-color: var(--cream);
+    border: thin solid var(--chocolate);
+    border-radius: .6vh;
+}
+
+.task__textarea {
+    resize: none;
+}
+
+.task__submit {
+    transition: all .6s !important;
+    background-color: var(--white_shadow) !important;
+}
+
+.task__submit:hover {
+    background-color: var(--chocolate) !important;
+    color: white !important;
+}
+
+.task__scroll{
+    height: 80vh;
+    overflow: hidden !important ;
+    overflow-y: scroll !important;
+}
+
+@media (max-width:576px){
+    .task__scroll{
+        height: 45vh;
+    }
+    
+}
+/* .task__creation__container{
+    position: absolute;
+    left: 1vh;
+    top: 40vh;
+    z-index: 1;
+} 
+.task__creation{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 39vh;
+    max-width: 39vh;
+    min-height: 49vh;
+    padding:3vh 1vh;
+}
+.task__creation h2, .task__creation label, .submit{
+    font-weight: bold;
+    color: black;
+}
+.task__creation label,.submit{
+    color:var(--chocolate)
+}
+.task__field__group{
+    display: inherit;
+    flex-direction: column;
+}
+.task__field__group label{
+    position: absolute;
+    margin-left: 1vh;
+}
+.task__field__group input{
+    padding: 0 1vh;
+    border: 0px inset;
+    border-top:3vh solid white;
+}
+
+.task__created__container{
+    padding-left:2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-height: 100vh;
+}
+.task{
+    margin: 4vh 2vh 0 2vh;
+    min-height: 40vh;
+    max-height: 40vh;
+    max-width: 40vh;
+    min-width: 40vh;
+    padding: 1.5vh 3vh;
+    text-align: center;
+}
+.task h2{
+    text-transform:capitalize;
+}
+.task__created__date{
+    margin:-1vh 0 1vh 0;
+    color: black;
+}
+.task__end__date{
+    color:green;
+    display: inline;
+}
+.task__end__date,.task__created__date{
+    opacity: .8;
+    font-size: .8em;
+}
+.task__buttons__group{
+    margin-bottom: 2vh;
+}
+.task__buttons__group button{
+    background-color: var(--chocolate);
+    justify-content: center;
+}
+.task__buttons__group :nth-child(2){
+    margin: 0 1vh;
+}
+.task__buttons__group button>a{
+    padding: .6vh .7vh 0;
+    margin:0;
+    font-weight: bold;
+    color:var(--cream);    
+}
+.task__buttons__group button>a:hover{
+    color: white;
+}
+.task__description{
+    max-width: 33vh;
+    min-width: 33vh;
+}
+.task__description label{
+    position: absolute;
+}
+.task__description textarea{
+    border: 0px inset;
+    border-top:4vh solid white;
+    padding:0 0vh 1vh 1vh;
+    resize: none;
+    width: 100%;
+    min-height: 21vh;
+    max-height:21vh;
+}
+.task__edit__image__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.edit__image{
+    height: 50%;
+}*/

@@ -1,0 +1,24 @@
+.pop__up{
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: 10vh auto 0;
+    padding: 1vh;
+    width: 80vw;
+    z-index: 1;
+}
+.pop__up__text{
+    border-radius: .6vw;
+    transition:all 2s;
+}
+.good{
+    background-color: greenyellow;
+    color: green;
+    border: thin solid green;
+}
+.not__good{
+    background-color: palevioletred;
+    color: red;
+    border: thin solid red ;
+}

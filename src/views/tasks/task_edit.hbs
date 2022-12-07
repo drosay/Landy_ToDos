@@ -1,0 +1,25 @@
+<section class="container">
+    <div class="row justify-content-between h-100">
+        <div class="col-lg-5 p-0 mb-3 align-self-center task__container">
+            <form action="/tasks/up/{{task.id}}&{{task.user_id}}" method="POST" class="w-75 p-3 mx-auto task__creation__container">
+            <legend class="fw-bold">Edit your ToDo</legend>
+                <div class="form-group mb-2">
+                    <label class="form-label" for="title">ToDo Title</label>
+                    <input class="form-control" value="{{task.title}}" type="text" name="title" id="title" maxlength="20"
+                        placeholder="Type your title here" autofocus required>
+                </div>
+                <div class="form-group mb-2">
+                    <label class="form-label" for="description">ToDo Description</label>
+                    <textarea class="form-control task__textarea" name="description" id="description" placeholder="Type your description here"
+                        required>{{task.description}}</textarea>
+                </div>
+                <div class="d-grid">
+                    <input class="btn task__submit fw-bold" type="submit" value="Update">
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-7 align-self-center">
+            <img class="img-fluid" src="/assets/bear_editing.png" alt="edit image" title="edit image" class="edit__image">
+        </div>
+    </div>
+</section>

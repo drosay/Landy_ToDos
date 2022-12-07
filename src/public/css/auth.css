@@ -1,0 +1,61 @@
+.do__you{
+    color: black;
+    margin-bottom: 2vh;
+}
+.do__you:not(a){
+    font-style: italic;
+    opacity: .7;
+}
+.do__you > a {
+    font-weight: bold;
+    transition: 1s;
+    text-decoration: none;
+    color: var(--chocolate);
+}
+.do__you > a:hover{
+    color: black
+}
+.auth__container{
+    position:absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50vh;
+    height: 60vh;
+    margin: auto;
+}
+.auth__sign__in__container{
+    height: 35vh;
+}
+.auth__form{
+    border-radius: 1vh;
+    padding: 2vh;
+    background-color: var(--cream);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.auth__form > h2,.auth__field__group > label{
+    opacity: .8;
+}
+.auth__field__container{
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+.auth__sign__in__container > .auth__form > .auth__field__container {
+    height: 50%;
+}
+.auth__field__group:not(input){
+    display: inherit;
+    flex-direction: column;
+    font-size: .9em;
+}
+.auth__field__group *:not(label),.auth__submit{
+    padding: .7vh;
+    border-radius: .5vh;
+}
