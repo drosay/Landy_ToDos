@@ -10,7 +10,7 @@ const {lost,count,refuse} = {
     refuse: 'ECONNREFUSED'
 }
 
-const pool = mysql.createPool(`mysql://${user}:${password}@${host}:${port}/${database}`)
+const pool = mysql.createPool(`mysql://root:I7yhrlpymRT4KT03nkdC@containers-us-west-151.railway.app:5487/railway`)
 
 pool.getConnection((error,connection)=>{
     if(error)
