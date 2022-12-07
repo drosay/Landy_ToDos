@@ -6,6 +6,7 @@ module.exports = {
         database: process.env.DB_NAME || "tasks",
         user: process.env.DB_USER || "root",
         password: process.env.DB_PASSWORD || "12345",
-        port: process.env.DB_PORT || 3306
+        port: process.env.DB_PORT || 3306,
+        insecureAuth: true
     }
 }
