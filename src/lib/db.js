@@ -1,7 +1,7 @@
 'use strict'
 
 const mysql = require('mysql2')
-const {host,database,user,password,port} = require('./key')
+const {database} = require('./key')
 const {promisify} = require('util')
 //database error codes
 const {lost,count,refuse} = {
@@ -10,7 +10,7 @@ const {lost,count,refuse} = {
     refuse: 'ECONNREFUSED'
 }
 
-const pool = mysql.createPool(`mysql://${user}:${password}@${host}:${port}/${database}`)
+const pool = mysql.createPool(database)
 
 pool.getConnection((error,connection)=>{
     if(error)
