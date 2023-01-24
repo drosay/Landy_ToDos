@@ -6,7 +6,7 @@ const {isLogged} = require('../lib/helps.js')
 
 Router.get('/', isLogged, async (req, res)=>{
         const {id} = req.user
-        const data = await pool.query('SELECT * FROM task where user_id = ?',[id])
+        const data = await pool.query(`SELECT * FROM task WHERE user_id=${id}`)
         res.render("tasks/task", {data})
 })
 

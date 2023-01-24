@@ -31,7 +31,6 @@ async function regVerify(req, username, password, done) {
         user.id = result.insertId
         return done(null ,user,req.flash('good','User successfully registered'))
     }catch(e){
-        //console.log(e)
         return done(false,false,req.flash('not_good',`An error occurred: ${e.code}` ))
     }
 
@@ -49,7 +48,7 @@ async function regVerify(req, username, password, done) {
 }
 
 async function sigVerify(req, username, password, done) {
-    const result = await pool.query('SELECT * FROM user WHERE username = ?', [username])
+    const result = await pool.query(`SELECT * FROM user WHERE username=${username}`)
     if (result[0]) {
         const user = result[0]
         const match = await matchPass(password, user.pass)
@@ -70,6 +69,6 @@ passport.serializeUser((user, done) => {
 })
 
 passport.deserializeUser(async (id, done) => {
-    const user = await pool.query('SELECT * FROM user WHERE id = ?', [id])
+    const user = await pool.query(`SELECT * FROM user WHERE id=${id}`)
     return done(null, user[0])
 })
